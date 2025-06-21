@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  padding: 2rem 5rem 2rem 2rem;
+  background-color: #f3f3f3;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #ccc; */
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.balance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  min-width: 3em;
+  min-height: 3em;
+  aspect-ratio: 1;
+  border: 2px solid green;
+  border-radius: 999rem;
+  font-size: 1.2em;
+}
+
+.border {
+  border-bottom: 2px solid #ccc;
+  width: 70%;
+  margin: 0 auto;
+}
