@@ -1,11 +1,12 @@
 import styles from "./Header.module.css";
+import BalanceDropdown from "./BalanceDropdown";
 
 function Header() {
   return (
     <>
       <div className={styles.header}>
         <div className={styles.logo}>Logo here</div>
-        <div className={styles.balance}>9533$</div>
+        <BalanceDropdown />
       </div>
       <div className={styles.border}></div>
     </>

@@ -1,7 +1,10 @@
 import styles from "./TransactionTabs.module.css";
+import { useAppContext } from "../../useAppContext";
+import { TAB_OPTIONS } from "../../constants";
 
-function TransactionTabs({ activeTab, setActiveTab }) {
-  const tabs = ["income", "expenses", "all"];
+function TransactionTabs() {
+  const { activeTab, setActiveTab } = useAppContext();
+  const tabs = TAB_OPTIONS;
 
   return (
     <div className={styles.tabs}>

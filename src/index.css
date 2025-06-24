@@ -4,3 +4,18 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+.form-container {
+  display: flex;
+  width: 62%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+  /* gap: 2rem; */
+  padding: 2rem;
+}
+
+.form-container > * {
+  flex: 1 1 auto;
+}

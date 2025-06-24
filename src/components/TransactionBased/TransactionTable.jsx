@@ -1,8 +1,10 @@
 import styles from "./TransactionTable.module.css";
 import TransactionRow from "./TransactionRow";
 import TransactionTabs from "./TransactionTabs";
+import { useAppContext } from "../../useAppContext";
 
-function TransactionTable({ activeTab, setActiveTab }) {
+function TransactionTable() {
+  const { activeTab } = useAppContext();
   const allTransactions = [
     {
       type: "income",
@@ -27,7 +29,7 @@ function TransactionTable({ activeTab, setActiveTab }) {
 
   return (
     <div className={styles["transaction-table"]}>
-      <TransactionTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <TransactionTabs />
 
       <div className={styles["table-header"]}>
         <span>Category</span>

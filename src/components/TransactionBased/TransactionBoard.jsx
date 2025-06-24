@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./TransactionBoard.module.css";
 import TransactionTable from "./TransactionTable";
 
 function TransactionBoard() {
-  const [activeTab, setActiveTab] = useState("all");
-
   return (
     <div className={styles["transaction-board"]}>
-      <TransactionTable activeTab={activeTab} setActiveTab={setActiveTab} />
+      <TransactionTable />
     </div>
   );
 }
