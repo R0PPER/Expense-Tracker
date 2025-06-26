@@ -14,7 +14,11 @@
   cursor: pointer;
   font-weight: bold;
   background-color: #fff;
-  transition: background-color 0.3s;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.balanceCircle:hover {
+  border-color: #1976d2;
 }
 
 .dropdown {
