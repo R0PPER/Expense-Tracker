@@ -1,14 +1,14 @@
 import styles from "./TransactionRow.module.css";
 
 function TransactionRow({ transaction }) {
-  const { category, title, amount, date } = transaction;
+  const { category, title, amount, dateTime } = transaction;
 
   return (
     <div className={styles["transaction-row"]}>
       <span>{category}</span>
       <span>{title}</span>
       <span>{amount} €</span>
-      <span>{date}</span>
+      <span>{dateTime}</span>
     </div>
   );
 }

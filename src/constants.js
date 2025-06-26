@@ -1,4 +1,4 @@
-export const TAB_OPTIONS = ["income", "expenses", "all"];
+export const TAB_OPTIONS = ["income", "expense", "all"];
 export const EXPENSE_CATEGORIES = [
   "Food & Groceries",
   "Transportation",

@@ -5,27 +5,20 @@ import { useAppContext } from "../../useAppContext";
 
 function TransactionTable() {
   const { activeTab } = useAppContext();
-  const allTransactions = [
-    {
-      type: "income",
-      category: "Salary",
-      title: "June Salary",
-      amount: 3000,
-      date: "2025-06-01",
-    },
-    {
-      type: "expense",
-      category: "Food",
-      title: "Groceries",
-      amount: 120,
-      date: "2025-06-03",
-    },
-  ];
 
+  const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+  const incomes = JSON.parse(localStorage.getItem("incomes")) || [];
+
+  const allTransactions = [
+    ...expenses.map((tx) => ({ ...tx, type: "expense" })),
+    ...incomes.map((tx) => ({ ...tx, type: "income" })),
+  ];
   const filtered =
     activeTab === "all"
       ? allTransactions
       : allTransactions.filter((tx) => tx.type === activeTab);
+
+  // console.log(filtered);
 
   return (
     <div className={styles["transaction-table"]}>
