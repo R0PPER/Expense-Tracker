@@ -18,7 +18,7 @@ function TransactionTable() {
       ? allTransactions
       : allTransactions.filter((tx) => tx.type === activeTab);
 
-  // console.log(filtered);
+  console.log(filtered);
 
   return (
     <div className={styles["transaction-table"]}>
